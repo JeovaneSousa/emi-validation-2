@@ -21,8 +21,6 @@ class LoginViewController: UIViewController {
         showAlert(withTitle: alertTitle, andMessage: validationMessage)
     }
     
-    
-    
     @IBAction func passwordRecoveryButtonPressed(_ sender: UIButton) {
         let (_ , alertTitle, validationMessage) = checkPasswordRecoveryInput()
         showAlert(withTitle: alertTitle, andMessage: validationMessage)
@@ -48,7 +46,7 @@ class LoginViewController: UIViewController {
     }
     
     
-    func showAlert(withTitle title:String, andMessage message:String){
+    func showAlert(withTitle title:AlertTitle, andMessage message:ValidationMessage){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
         self.present(alert, animated: true)
